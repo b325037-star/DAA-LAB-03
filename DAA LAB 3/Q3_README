@@ -1,0 +1,34 @@
+ALGORITHM -
+MaxMin(A, low, high)
+
+If only one element:
+    min = max = A[low]
+
+If two elements:
+    compare them
+    smaller = minimum
+    larger = maximum
+
+Otherwise:
+    divide array into two halves
+    find MaxMin of left half
+    find MaxMin of right half
+
+    compare the two minimums
+    compare the two maximums
+
+
+
+Complexity
+For n elements:
+T(n)=2T(n/2)+2
+
+Hence:
+T(n)=O(n)
+
+For even n, the number of comparisons is:
+3n/2 −2
+
+So the number of comparisons is bounded by:3N/2
+
+which validates the requirement of the question.
