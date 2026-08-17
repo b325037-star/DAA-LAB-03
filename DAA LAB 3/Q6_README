@@ -1,0 +1,39 @@
+ALGORITHM: SELECTION-SORT(A, n)
+
+1. For i = 0 to n-2
+
+2.      min = i
+
+3.      For j = i+1 to n-1
+
+4.          If A[j] < A[min]
+                min = j
+
+5.      Exchange A[i] and A[min]
+
+6. End For
+
+
+TIME COMPLEXITY
+Number of comparisons:
+
+(n-1) + (n-2) + ... + 2 + 1
+
+= n(n-1)/2
+
+Therefore,
+
+Best Case    = Θ(n^2)
+Average Case = Θ(n^2)
+Worst Case   = Θ(n^2)
+
+
+
+
+
+WHY BEST CASE IS NOT BETTER -
+Even if the array is already sorted,
+Selection Sort still searches for the
+minimum element in every remaining part.
+
+Therefore, best-case time is also Θ(n^2).
