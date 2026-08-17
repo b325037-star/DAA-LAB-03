@@ -1,0 +1,29 @@
+Algorithm
+
+1.Set low = 0 and high = n-1.
+2.Find middle:
+3.mid = (low + high)/2
+4.If A[mid] == x, return the position.
+5.If x < A[mid], search the left half.
+6.Otherwise search the right half.
+7.Repeat until low > high.
+
+Complexity
+Binary Search:
+
+T(n)=T(n/2)+c
+Therefore,
+T(n)=O(log₂ n)  
+
+Ternary Search:
+
+T(n)=T(n/3)+c
+Therefore,
+T(n)=O(log₃ n)
+Although log₃ n is mathematically smaller than log₂ n, ternary search performs more comparisons at every iteration because it checks two middle elements.
+
+For example:
+| Search  | Parts | Comparisons/iteration |
+| ------- | ----: | --------------------: |
+| Binary  |     2 |                     1 |
+| Ternary |     3 |               up to 2 |
