@@ -1,0 +1,42 @@
+ALGORITHM
+
+DefectiveCoin(A, low, high)
+
+1. If low == high
+      return low
+
+2. If number of coins is even
+      Divide into two equal groups
+      Weigh both groups
+
+      If weights are equal
+          return NONE
+
+      If left group is lighter
+          search left group
+      Else
+          search right group
+
+3. If number of coins is odd
+      Keep one coin aside
+      Divide remaining coins into two equal groups
+      Weigh both groups
+
+      If one group is lighter
+          search lighter group
+
+      If both groups are equal
+          compare remaining coin with a known good coin
+          if lighter → defective
+          else → NONE
+
+Complexity
+
+Each step approximately halves the number of coins:
+
+T(n)=T(n/2)+O(1)
+
+Therefore:
+
+T(n)=O(log₂ n )+ c
+which satisfies the required log₂ n + c form.
