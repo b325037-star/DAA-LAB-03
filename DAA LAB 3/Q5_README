@@ -1,0 +1,47 @@
+ALGORITHM: SPECIAL-MATRIX-MULTIPLICATION(A, B, n)
+
+1. If n = 1
+      Return A × B
+
+2. Divide A into:
+      A1 and A2
+
+   where
+
+      A = | A1  A2 |
+          | A2  A1 |
+
+3. Divide B into:
+      B1 and B2
+
+   where
+
+      B = | B1  B2 |
+          | B2  B1 |
+
+4. Calculate:
+      P = (A1 + A2)(B1 + B2)
+
+5. Calculate:
+      Q = (A1 - A2)(B1 - B2)
+
+6. Calculate:
+      C = (P + Q) / 2
+
+      D = (P - Q) / 2
+
+7. Form the result:
+
+      Result = | C  D |
+               | D  C |
+
+8. Return Result.
+
+
+TIME COMPLEXITY
+
+T(n) = 2T(n/2) + O(n^2)
+
+Therefore,
+T(n) = O(n^2)
+
